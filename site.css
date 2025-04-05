@@ -1,1 +1,32 @@
+/* Container Styling */
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/* Heading Styles */
+h1, h2, h3, h4 {
+    background-color: #4CAF50;  /* Green background */
+    color: #FFFFFF;             /* White text */
+    border: 1px solid #D6A800;  /* Border color */
+    padding: 10px;
+}
+
+/* Anchor Styling */
+a {
+    color: #3498db;             /* Blue link color */
+    text-decoration: none;      /* Remove underline */
+}
+
+/* Anchor Hover Styling */
+a:hover {
+    color: #e74c3c;             /* Red color on hover */
+}
+
+/* Anchor Visited Styling */
+a:visited {
+    color: #9b59b6;             /* Purple for visited links */
+}
+
 
