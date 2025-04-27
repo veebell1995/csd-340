@@ -6,44 +6,88 @@
 -->
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS if external -->
+    <style>
+        html, body {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        p {
+            font-weight: 400;
+            line-height: 1.4em;
+        }
+
+        h1 {
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: 500;
+            text-align: left;
+            padding-top: 15px;
+        }
+
+        address {
+            text-align: center;
+        }
+
+        address a {
+            font-weight: bold;
+            font-size: 1.25em;
+            color: #4F3674;
+            text-decoration: none;
+        }
+
+        address a:hover {
+            text-decoration: underline;
+            background-color: #D6A800;
+        }
+
+        address a:visited {
+            color: #6F4F37;
+        }
+
+        .sentence {
+            font-style: italic;
+        }
+
+        .intro {
+            text-indent: 2em;
+        }
+    </style>
     <script>
-        var word1 = "golden";
-        var word2 = "silent";
-        var word3 = "twilight";
-        var word4 = "dreams";
+        var word1 = "brave";
+        var word2 = "united";
+        var word3 = "freedom";
+        var word4 = "future";
     </script>
 </head>
-
 <body>
     <h1>Assignment 9.3: JavaScript - Part 1</h1>
 
-    <p>
-        In the <span id="word1">__________</span> fields of memory,<br>
-        I wander through the echoes of my past,<br>
-        Where every sound is <span id="word2">__________</span> and slow,<br>
-        And moments like shadows are cast.
-    </p>
+    <p class="intro">Today, we celebrate something greater than ourselves. A moment of unity, of strength, of determination. We stand together not as separate nations, but as one.</p>
+
+    <p>We will not go quietly into the night. We will not vanish without a fight. We're going to live on. We're going to survive. And through it all, we stay <span id="word1">__________</span>.</p>
+
+    <p>This is the day the world declared in one voice: "We will not give up!" We are <span id="word2">__________</span> in the face of adversity.</p>
+
+    <p>We fight for our <span id="word3">__________</span>, for our children, and for the <span id="word4">__________</span> of all mankind.</p>
 
     <p>
-        The <span id="word3">__________</span> paints the sky in purple tones,<br>
-        Whispering stories the stars will keep,<br>
-        Each one a spark in the night’s embrace,<br>
-        Guiding me gently to sleep.
+        <button onclick="document.getElementById('word1').innerHTML = word1">Reveal Word 1</button>
+        <button onclick="document.getElementById('word2').innerHTML = word2">Reveal Word 2</button>
+        <button onclick="document.getElementById('word3').innerHTML = word3">Reveal Word 3</button>
+        <button onclick="document.getElementById('word4').innerHTML = word4">Reveal Word 4</button>
     </p>
 
-    <p>
-        I close my eyes and drift away,<br>
-        Wrapped in threads of tender <span id="word4">__________</span>,<br>
-        Sailing where thoughts begin to sway,<br>
-        Beneath the moon’s silver beams.
-    </p>
-
-    <button onclick="document.getElementById('word1').innerHTML = word1">Reveal Word 1</button>
-    <button onclick="document.getElementById('word2').innerHTML = word2">Reveal Word 2</button>
-    <button onclick="document.getElementById('word3').innerHTML = word3">Reveal Word 3</button>
-    <button onclick="document.getElementById('word4').innerHTML = word4">Reveal Word 4</button>
+    <address>
+        Created by <a href="#">Your Name</a>
+    </address>
 </body>
 </html>
