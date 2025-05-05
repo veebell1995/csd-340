@@ -39,7 +39,7 @@
 
   <h1>Assignment 10.3: JavaScript - Part 2</h1>
 
-  <img src="images/rocket.jpg" alt="Click to launch!" id="interactiveImage" onclick="changeImage()">
+  <img src="rocket.jpg" alt="Click to launch!" id="interactiveImage" onclick="changeImage()">
 
   <div id="caption">Click the rocket to explore space!</div>
 
@@ -51,10 +51,10 @@
       const caption = document.getElementById("caption");
 
       if (launched) {
-        img.src = "images/rocket.jpg";
+        img.src = "rocket.jpg";
         caption.innerText = "Click the rocket to explore space!";
       } else {
-        img.src = "images/galaxy.jpg";
+        img.src = "galaxy.jpg";
         caption.innerText = "You’ve launched into the galaxy!";
       }
 
