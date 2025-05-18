@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSD 340 Web Development with HTML and CSS</title>
+  <link rel="stylesheet" href="LastName_Mod4_2.css">
+  <style>
+    #book-list {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    button {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Assignment 12.2: JavaScript - Part 4</h1>
+
+    <div id="image-gallery">
+      <!-- Image Card 1 -->
+      <div>
+        <h3>Beautiful Mountain Landscape</h3>
+        <figure>
+          <img src="images/mountain.jpg" alt="Mountain Landscape" width="300">
+          <figcaption>(author: Jane Doe)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Image Card 2 -->
+      <div>
+        <h3>City Skyline at Night</h3>
+        <figure>
+          <img src="images/city.jpg" alt="City Skyline" width="300">
+          <figcaption>(author: John Smith)</figcaption>
+        </figure>
+      </div>
+
+      <!-- Image Card 3 -->
+      <div>
+        <h3>Serene Forest Path</h3>
+        <figure>
+          <img src="images/forest.jpg" alt="Forest Path" width="300">
+          <figcaption>(author: Alex Lee)</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Book List Section -->
+    <div id="book-list">
+      <h2>My Top 10 Favorite Books</h2>
+      <button onclick="displayTopToBottom()">Top to Bottom</button>
+      <button onclick="displayBottomToTop()">Bottom to Top</button>
+      <ul id="books"></ul>
+    </div>
+
+    <!-- Link back to landing page -->
+    <div style="text-align: center; margin-top: 20px;">
+      <a href="index.html">Back to Landing Page</a>
+    </div>
+  </div>
+
+  <script>
+    const books = [
+      "To Kill a Mockingbird",
+      "1984",
+      "Pride and Prejudice",
+      "The Great Gatsby",
+      "Moby Dick",
+      "War and Peace",
+      "The Catcher in the Rye",
+      "The Lord of the Rings",
+      "Jane Eyre",
+      "Brave New World"
+    ];
+
+    function displayTopToBottom() {
+      const list = document.getElementById("books");
+      list.innerHTML = "";
+      books.forEach(book => {
+        const li = document.createElement("li");
+        li.textContent = book;
+        list.appendChild(li);
+      });
+    }
+
+    function displayBottomToTop() {
+      const list = document.getElementById("books");
+      list.innerHTML = "";
+      [...books].reverse().forEach(book => {
+        const li = document.createElement("li");
+        li.textContent = book;
+        list.appendChild(li);
+      });
+    }
+  </script>
+</body>
+</html>
